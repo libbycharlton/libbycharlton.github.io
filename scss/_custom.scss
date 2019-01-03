@@ -1,0 +1,135 @@
+
+.fancy-hover-item {
+  line-height: 1;
+  margin-bottom: .8rem;
+
+  @media (min-width: $desktop-min) {
+    font-size: 1.1rem;
+  }
+
+  span {
+    position: relative;
+    cursor: pointer;
+    height: 25px;
+
+    &:hover a::after {
+      width: 100%;
+        transition: 0.2s ease all;
+    }
+
+  }
+}
+
+.fancy-hover-item__link {
+  line-height:25px;
+  border-bottom: 0;
+  color: $dark-teal;
+
+  &:hover {
+    border-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    background-color: $teal;
+      transition: 0.2s ease all .0s;
+  }
+}
+
+.link-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    margin: 0 0 1rem;
+  }
+}
+
+.next-steps {
+  font-weight: 700;
+}
+
+a.loud {
+  border-bottom: 3px $teal solid;
+
+  &:hover {
+    border-bottom: 1px $light-grey dotted;
+  }
+}
+
+
+.map {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-min) {
+    max-width: 50%;
+  }
+}
+
+
+// Logos
+.logo {
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+}
+.logo--patoss {
+  max-width: 7rem;
+}
+.logo--bda {
+  max-width: 14.5rem;
+}
+
+
+// Collapsibles
+.trigger {
+  margin: 0.4rem 0;
+
+  a {
+    color: $dark-teal;
+  }
+}
+
+// Small text
+.details {
+  p, li {
+    font-size: 1rem;
+    margin-bottom: .4rem;
+  }
+}
+
+// https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+
+  .hanging-icon {
+    position: relative;
+    padding-left: 50px;
+
+    .icon {
+      position: absolute;
+      left: 0;
+    }
+
+  }
+}

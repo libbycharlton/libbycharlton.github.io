@@ -1,0 +1,202 @@
+
+//===========================
+// Mobile-only nav styles
+// Yep I could do this with a max-width media query, but I need to 
+// boost the specificity (a little) to override the (modified) Slidebars CSS
+.is-mobile {
+  [off-canvas] {
+    background-color: $slate;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
+
+    .constrained {
+      max-width: none;
+    }
+  }
+}
+// Hamburger
+.mobile-nav-btn {
+  font-weight: 700;
+  cursor: pointer;
+  position: fixed;
+  top: 0rem;
+  right: 1.5rem;
+  z-index: 10;
+  color: $white;
+  background-color: $teal;
+  transition: background-color 0.25s ease;
+  padding: 1rem;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.05);
+
+  &:hover {
+    background-color: #555;
+  }
+}
+// Contact details in mobile menu
+.masthead {
+  .details {
+    margin-top: 1rem;
+    padding-top: .5rem;
+    border-top: 1px solid #555;
+    color: $white;
+  }
+  .link-list {
+
+    li {
+      margin: 1.5rem 0 0 ;
+    }
+    a {
+      color: $white;
+    }
+    .icon {
+      padding-left: 30px;
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+//===========================
+// Core nav styles
+// These are mostly universal styles
+
+.nav__item {
+  position: relative;
+}
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 5rem 0 1rem 0;
+}
+
+.nav__link {
+  font-weight: 400;
+  border: none;
+  display: block;
+  padding: .6rem 0;
+
+  .nav__item--home & {
+    font-weight: 700;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+  }
+  &:hover {
+    border: none;
+  }
+}
+
+
+//===========================
+// Mobile nav styles
+
+@media (max-width: $mobile-max) {
+
+  .nav__link {
+    color: $white;
+
+    .nav__item--home & {
+      font-weight: 700;
+    }
+    &:hover, 
+    &:active {
+      border: none;
+
+      &::after {
+        left: -20px;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 5px;
+        background-color: $white;
+      }
+    }
+  }
+  .nav__item--current {
+
+    .nav__link {
+      color: $green;
+
+      &::after {
+        left: -20px;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 5px;
+        background-color: $green;
+      }
+    }
+  }
+}
+
+
+//===========================
+// Desktop nav styles
+
+@media (min-width: $tablet-min) {
+
+  body {
+    padding-top: 2.5rem; // pinned desktop nav
+  }
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  .nav {
+    background-color: $white;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.05);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+  .nav__list {
+    padding: 0;
+  }
+  .nav__item {
+    display: inline-block;
+    margin: 0 .2rem;
+  }
+  .nav__link {
+    color: $dark-teal;
+    position: relative;
+    font-size: 1rem;
+    padding: .6rem .8rem;
+
+    &::after {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background-color: $light-grey;
+    }
+
+    &:hover {
+
+      &::after {
+        width: 100%;
+        transition: all 0.25s ease;
+     }
+    }
+
+    .nav__item--current & {
+      color: $dark-teal;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $teal;
+      }
+    }
+  }
+}

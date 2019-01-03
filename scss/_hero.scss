@@ -1,0 +1,211 @@
+.hero {
+  position: relative;
+  margin-bottom: -3rem;
+  padding: 1rem 0 2rem;
+  background-image: url(../img/content/portrait-a-600x337.jpg);
+  background-size: contain;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  height: 36rem;
+
+  p {
+    a {
+      border-bottom: 3px $teal solid;
+
+      &:hover {
+        border-bottom: 1px $light-grey dotted;
+      }
+    }
+  }
+
+  &::after {
+    content: " ";
+    background: $green url(../img/ui/blockquote-texture.png);
+    border-radius: 12px;
+    transform: rotate(-2deg);
+  }
+  .hero__content {
+    padding: 0 1.5rem 0 2rem;
+    z-index: 3;
+
+    ul, p {
+      a {
+        color: $dark-teal;
+      }
+    }
+  }
+
+  .hero__content,
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 630px;
+
+    left: 1.5rem;
+    top: 13rem;
+    width: 90%;
+    height: 27rem;
+  }
+
+  @media (min-width: 340px) {
+    height: 37rem;
+
+    .hero__content,
+    &::after {
+      top: 15rem;
+      height: 25rem;
+    }
+  }
+  @media (min-width: 420px) {
+
+    .hero__content,
+    &::after {
+      top: 17rem;
+      height: 23rem;
+    }
+  }
+  @media (min-width: 470px) {
+    height: 40rem;
+
+    .hero__content,
+    &::after {
+      top: 19rem;
+    }
+  }
+  @media (min-width: 520px) {
+    height: 39rem;
+
+    .hero__content,
+    &::after {
+      top: 20rem;
+      height: 21rem;
+    }
+  }
+  @media (min-width: 570px) {
+    height: 41rem;
+    .hero__content,
+    &::after {
+      top: 23rem;
+      height: 20rem;
+    }
+  }
+  @media (min-width: $tablet-min) {
+    height: 45rem;
+
+    .hero__content,
+    &::after {
+      top: 24rem;
+      height: 23rem;
+    }
+  }
+  @media (min-width: 670px) {
+    height: 47rem;
+
+    .hero__content,
+    &::after {
+      top: 26rem;
+    }
+  }
+  @media (min-width: 760px) {
+    height: 49rem;
+
+    .hero__content,
+    &::after {
+      top: 28rem;
+    }
+  }
+  @media (min-width: 800px) {
+    height: 52rem;
+
+    .hero__content,
+    &::after {
+      top: 31rem;
+    }
+  }
+  @media (min-width: 840px) {
+    height: 43rem;
+    background-image: url(../img/content/portrait-a-1200x674.jpg);
+
+    .hero__content,
+    &::after {
+      top: 22rem;
+    }
+  }
+  @media (min-width: 940px) {
+    height: 45rem;
+
+    .hero__content,
+    &::after {
+      top: 24rem;
+    }
+  }
+  @media (min-width: 1020px) {
+    background-size: cover;
+    height: 40rem;
+
+    &::after,
+    .hero__content {
+      left: 1.5rem;
+      width: 60%;
+      top: 10rem;
+      height: 24rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    background-position-x: unset;
+  }
+}
+
+.hero__title {
+  line-height: 1.2;
+  padding-bottom: 0;
+}
+.hero__list {
+  margin-top: 1.5rem;
+}
+
+.hero__link--contact {
+  display: table;
+  border: 0;
+  background: $teal;
+  transition: background-color 0.25s ease;
+  color: #fff;
+  position: absolute;
+  bottom: 2rem;
+  right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+
+  &:hover {
+    background: #555;
+    border-bottom: 0;
+  }
+
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  @media (min-width: 370px) {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    span {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (min-width: 420px) {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 6rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+
+}

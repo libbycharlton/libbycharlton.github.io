@@ -1,0 +1,138 @@
+body {
+  background: #eee;
+}
+[canvas=container],
+.is-mobile [canvas=container] { // Slidebars mobile menu
+  background-color: transparent;
+}
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.strata {
+  padding: 4rem 0 2rem;
+}
+.strata--mid,
+.strata--dark {
+  a {
+    color: #fff;
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+}
+.strata--mid {
+  background: $dark-teal;
+  color: $green;
+}
+.strata--dark {
+  background: $slate;
+  color: $light-grey;
+}
+.strata--light {
+  background: $background-tint;
+}
+
+.strata__title {
+  padding-top: 4rem; /* for nicer in-page anchoring (beware pinned menu) */
+  margin-top: -4rem;
+}
+
+.constrained {
+  padding: 0 20px;
+  max-width: 860px;
+  margin: 0 auto;
+
+  .strata & {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: $tablet-min) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @media (min-width: 840px) {
+      th {
+        padding-left: 4rem;
+      }
+      td {
+        padding-right: 4rem;
+        padding-top: 2.3rem;
+      }      
+      tfoot td {
+        padding-left: 4rem;
+      }
+    }
+  }
+}
+
+//Breakout into left & right gutters
+@media (min-width: 840px) {
+
+  .breakout {
+    margin-left: -4rem;
+    margin-right: -4rem;
+    box-sizing: content-box;
+  }
+  .breakout--right {
+    margin-left: 4rem;
+  }
+}
+
+// Margins
+.margin-top--l {
+  margin-top: 4rem;
+}
+.margin-bottom--neg {
+  margin-bottom: -2rem;
+}
+
+// Media object
+@media (min-width: $tablet-min) {
+  .media {
+    overflow: hidden;
+  }
+  .media__item  {
+    margin: 0 2rem 0 0;
+    float: left;
+  }
+  .media__item--rev  {
+    margin-left: 2rem;
+    float: right;
+  }
+  .media__content  {
+    overflow: hidden;
+  }
+}
+
+.media__item--logo {
+  max-width: 200px;
+  margin: 0 0 2rem;
+}
+
+.centre {
+  text-align: center;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Split (grid-type affair for two things)
+.split {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.split__half {
+  display: inline-block;
+  width: 49%;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  vertical-align: top
+}

@@ -1,0 +1,46 @@
+.icon {
+  position: relative;
+  padding-left: 50px;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-size: cover;
+    border-bottom: none;
+
+  }
+
+}
+.icon--inline {
+  margin: 0 -10px 0 20px
+}
+
+
+.icon--email {
+  &:before {
+    background-image: url(../img/ui/icons/envelope.svg);
+  }
+}
+.icon--menu {
+  padding-left: 30px;
+  &:before {
+    background-image: url(../img/ui/icons//hamburger.svg);
+    width: 20px;
+    height: 20px;
+    top: -2px;
+  }
+}
+.icon--phone {
+  &:before {
+    background-image: url(../img/ui/icons//phone.svg);
+  }
+}
+.icon--twitter {
+  &:before {
+    background-image: url(../img/ui/icons//twitter.svg);
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "libbycharlton.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {},
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "tablesaw": "^3.0.9",
+    "cryptiles": ">=4.1.2",
+    "sshpk": ">=1.13.2",
+    "hoek": ">=4.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:libbycharlton/libbycharlton.github.io.git"
+  }
+}

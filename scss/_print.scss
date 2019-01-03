@@ -1,0 +1,13 @@
+@media print {
+  body {
+    font-size: 12px;
+  }
+  blockquote p,
+  th,
+  td {
+    font-size: 12px;
+  }
+  blockquote cite {
+    font-size: 10px;
+  }
+}

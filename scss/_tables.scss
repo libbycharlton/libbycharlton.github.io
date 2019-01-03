@@ -1,0 +1,92 @@
+table {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: left;
+}
+th,
+td {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  vertical-align: top;
+  border-top: 1rem $background solid;
+  background: $background-tint;
+
+  p:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+th {
+  padding: 2rem 2rem 1rem 2rem ;
+  font-weight: normal;
+
+  .strata--light & {
+    background: $background;
+    border-top: 1rem $background-tint solid;
+  }  
+}
+td {
+  min-width: 232px;
+  padding: 1rem 2rem 2rem 2rem;
+  background: $green;
+
+  .strata--light & {
+    @media (min-width: $tablet-min) {
+      border-top: 1rem $background-tint solid;
+    }
+  }  
+}
+
+table small {
+  display: block;
+}
+@media (min-width: $tablet-min) {
+
+  th {
+    padding-bottom: 2rem;
+  }
+  td {
+    border-top: 1rem $background solid;
+    padding-top: 2rem;
+    line-height: 1;
+    text-align: right;
+
+    // to match h4 in assessments table
+    .cost {
+      padding-top: 1rem;
+    }
+
+    abbr {
+      text-decoration: none;
+    }
+    small {
+      display: block;
+      padding-top: .4rem;
+      color: $dark-teal;
+    }
+  }
+
+  tbody {
+    tr:first-of-type td,
+    tr:first-of-type th {
+      border-top: 0;
+    }
+  }
+
+}
+.table__subhead:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+tfoot {
+  td {
+    text-align: left;
+    border-top: 1rem $background-tint solid;
+
+    a {
+      color: $dark-teal;
+    }
+  }
+}
