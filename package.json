@@ -5,7 +5,7 @@
   "main": "index.html",
   "directories": {},
   "dependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.3",
     "tablesaw": "^3.0.9",
     "cryptiles": ">=4.1.2",
     "sshpk": ">=1.13.2",
