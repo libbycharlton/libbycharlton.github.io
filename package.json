@@ -5,11 +5,11 @@
   "main": "index.html",
   "directories": {},
   "dependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^9.0.0",
     "tablesaw": "^3.0.9",
     "cryptiles": ">=4.1.2",
     "sshpk": ">=1.13.2",
-    "tar": ">=4.4.18",
+    "tar": ">=7.5.2",
     "lodash": ">=4.17.21",
     "extend": ">=3.0.2",
     "hoek": ">=4.2.1"
