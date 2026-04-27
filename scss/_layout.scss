@@ -56,7 +56,7 @@ main {
     }
 
     @media (min-width: 840px) {
-      th {
+      th:first-of-type {
         padding-left: 4rem;
       }
       td {
@@ -89,6 +89,10 @@ main {
 }
 .margin-bottom--neg {
   margin-bottom: -2rem;
+}
+
+.padding-top--s {
+  padding-top: 1rem; 
 }
 
 // Media object

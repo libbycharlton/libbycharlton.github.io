@@ -610,7 +610,7 @@ textarea {
     page-break-after: avoid; } }
 
 html {
-  font-family: 'PT Sans', serif;
+  font-family: "Atkinson Hyperlegible", serif;
   font-size: 13px;
   line-height: 1.2; }
   @media (min-width: 841px) {
@@ -715,14 +715,17 @@ blockquote cite {
   display: block;
   margin-top: 1rem; }
 
-ul {
+ul, ol {
   font-size: 1.4rem;
   line-height: 1.5;
   margin: 0 0 2rem;
   padding: 0 0 0 1.4rem; }
+  ul li, ol li {
+    margin-bottom: .5rem; }
 
-li {
-  margin-bottom: .5rem; }
+ol li {
+  margin: 0;
+  padding: 0 0 0 1rem; }
 
 a {
   color: #3E817F;
@@ -842,6 +845,10 @@ table {
   width: 100%;
   margin: 2rem 0;
   text-align: left; }
+  table th,
+  table p,
+  table h4 {
+    font-size: 1.1rem; }
 
 th,
 td {
@@ -857,10 +864,13 @@ td {
 
 th {
   padding: 2rem 2rem 1rem 2rem;
-  font-weight: normal; }
-  .strata--light th {
-    background: #eee;
-    border-top: 1rem #e7e7e7 solid; }
+  font-weight: normal;
+  background: #eee;
+  border-top: 1rem #e7e7e7 solid; }
+
+thead th {
+  background: none;
+  border: 0; }
 
 td {
   min-width: 232px;
@@ -889,8 +899,8 @@ table small {
       display: block;
       padding-top: .4rem;
       color: #326D6C; }
-  tbody tr:first-of-type td,
-  tbody tr:first-of-type th {
+  tbody tr:first-of-type th,
+  tbody tr:first-of-type td {
     border-top: 0; } }
 
 .table__subhead:first-of-type {
@@ -912,6 +922,8 @@ tfoot td {
   background-position-x: 20%;
   background-repeat: no-repeat;
   height: 36rem; }
+  .hero + .banner {
+    margin-top: 3rem; }
   .hero p a {
     border-bottom: 3px #3E817F solid; }
     .hero p a:hover {
@@ -1349,7 +1361,7 @@ main {
         padding-left: 4rem;
         padding-right: 4rem; } }
     @media (min-width: 840px) {
-      .strata .constrained th {
+      .strata .constrained th:first-of-type {
         padding-left: 4rem; }
       .strata .constrained td {
         padding-right: 4rem;
@@ -1370,6 +1382,9 @@ main {
 
 .margin-bottom--neg {
   margin-bottom: -2rem; }
+
+.padding-top--s {
+  padding-top: 1rem; }
 
 @media (min-width: 641px) {
   .media {
@@ -1508,6 +1523,15 @@ a.loud {
 .details p, .details li {
   font-size: 1rem;
   margin-bottom: .4rem; }
+
+.notice {
+  background: #f7f7f7;
+  padding: 1rem;
+  margin: 0 0 2rem;
+  border: 10px #dbe4c4 solid; }
+
+.notice :last-child {
+  margin-bottom: 0; }
 
 .video-wrapper {
   position: relative;

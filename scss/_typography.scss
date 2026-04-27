@@ -1,5 +1,5 @@
 html {
-  font-family: 'PT Sans', serif;
+  font-family: "Atkinson Hyperlegible", serif;
   font-size: 13px;
   line-height: 1.2;
 
@@ -109,16 +109,19 @@ blockquote cite {
   display: block;
   margin-top: 1rem;
 }
-ul {
+ul, ol {
   font-size: 1.4rem;
   line-height: 1.5;
   margin: 0 0 2rem;
   padding: 0 0 0 1.4rem;
+  li {
+    margin-bottom: .5rem;
+  }
 }
-li {
-  margin-bottom: .5rem;
-}
-
+ol li {
+  margin: 0;
+  padding: 0 0 0 1rem; 
+} 
 a {
   color: $teal;
   border-bottom: 1px $light-grey dotted;
