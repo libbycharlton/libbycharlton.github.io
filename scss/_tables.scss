@@ -2,6 +2,11 @@ table {
   width: 100%;
   margin: 2rem 0;
   text-align: left;
+  th,
+  p,
+  h4 {
+    font-size: 1.1rem;
+  }
 }
 th,
 td {
@@ -19,12 +24,13 @@ td {
 th {
   padding: 2rem 2rem 1rem 2rem ;
   font-weight: normal;
-
-  .strata--light & {
-    background: $background;
-    border-top: 1rem $background-tint solid;
-  }  
+  background: $background;
+  border-top: 1rem $background-tint solid;
 }
+thead th {
+  background: none;
+  border: 0;
+}  
 td {
   min-width: 232px;
   padding: 1rem 2rem 2rem 2rem;
@@ -67,9 +73,11 @@ table small {
   }
 
   tbody {
-    tr:first-of-type td,
-    tr:first-of-type th {
-      border-top: 0;
+    tr:first-of-type {
+      th, 
+      td {
+        border-top: 0;
+      }
     }
   }
 

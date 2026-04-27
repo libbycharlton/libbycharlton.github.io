@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   height: 36rem;
 
+  + .banner {
+    margin-top: 3rem;
+  }
+  
   p {
     a {
       border-bottom: 3px $teal solid;
